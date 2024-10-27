@@ -1,0 +1,57 @@
+.logo {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
+}
+.header_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--gray);
+  font-weight: medium;
+  font-size: 1.8rem;
+  font-family: var(--font-avenir);
+  border-bottom: 2px solid transparent;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.linkmob {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 3rem;
+  font-family: var(--font-avenir);
+}
+.header {
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white; /* Or any other background you want */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  z-index: 1000;
+}
+.active {
+  border-bottom: 2px solid var(--blue);
+  color: var(--blue);
+}
+
+@media screen and (max-width: 992px) {
+  .active {
+    border: none;
+    color: var(--red);
+  }
+}

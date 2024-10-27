@@ -1,0 +1,49 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: url("../../assets/circket-ground.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.player {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 2rem auto 0;
+}
+.playerpos {
+  position: relative;
+}
+.ball {
+  position: absolute;
+  bottom: -6%;
+  left: 30%;
+  width: 7rem;
+  height: 7rem;
+  object-fit: contain;
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .banner {
+    padding: 10rem 0;
+  }
+  .player {
+    max-width: 150px;
+  }
+}
