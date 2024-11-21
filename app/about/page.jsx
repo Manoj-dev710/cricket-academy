@@ -62,21 +62,21 @@ Future Champions"
                   className="img-fluid block margin-auto"
                 />
               </div>
-              <p className="paragraph text-gray justify-center mt-2">
+              <p className="paragraph text-gray full-text-justify mt-2">
                 Lorem ipsum dolor sit amet consectetur. Et ante imperdiet
                 porttitor vulputate id. Ultrices id lectus lectus consequat
                 porttitor lobortis. Morbi sit nunc eleifend magna ornare enim.
                 Non malesuada amet pulvinar mus. Diam massa ac eget mauris. Mi
                 ut enim in egestas massa. Bibendum nec rutrum sed commodo.
               </p>
-              <p className="paragraph text-gray justify-center mt-2">
+              <p className="paragraph text-gray full-text-justify mt-2">
                 Lorem ipsum dolor sit amet consectetur. Et ante imperdiet
                 porttitor vulputate id. Ultrices id lectus lectus consequat
                 porttitor lobortis. Morbi sit nunc eleifend magna ornare enim.
                 Non malesuada amet pulvinar mus. Diam massa ac eget mauris. Mi
                 ut enim in egestas massa. Bibendum nec rutrum sed commodo.
               </p>
-              <p className="paragraph text-gray justify-center mt-2">
+              <p className="paragraph text-gray full-text-justify mt-2">
                 Lorem ipsum dolor sit amet consectetur. Et ante imperdiet
                 porttitor vulputate id. Ultrices id lectus lectus consequat
                 porttitor lobortis. Morbi sit nunc eleifend magna ornare enim.
@@ -108,7 +108,7 @@ Future Champions"
               <h2 className="title text-white rocket">
                 Elevating Passion: Join Our Cricket Training Journey
               </h2>
-              <p className="paragraph text-white justify-center mt-2">
+              <p className="paragraph text-white full-text-justify mt-2">
                 Lorem ipsum dolor sit amet consectetur. Aenean in consectetur
                 massa sit id aenean id. Urna tortor maecenas egestas id.
                 Dignissim dui a luctus id dui vitae sed tincidunt faucibus.

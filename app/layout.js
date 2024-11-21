@@ -1,8 +1,10 @@
+
 import Header from "@/components/header/Header";
 import "./globals.css";
 import "./typography.css";
 import "./media.css";
 import Footer from "@/components/footer/Footer";
+import LoadingSpinner from "@/components/Loading/LoadingSpinner";
 
 export const metadata = {
   title: "Create Next App",
@@ -12,6 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <LoadingSpinner />
         <Header />
         {children}
         <Footer />

@@ -418,9 +418,110 @@ html {
   right: 10%;
   transform: translateX(-50%);
 }
-.form-sec{
+.form-sec {
   padding: 2rem;
   border-radius: 10px;
   background: #fff;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.opacitydim {
+  opacity: 0.8;
+}
+.custom-prev,
+.custom-next,
+.custom-prev4,
+.custom-next4,
+.custom-prev2,
+.custom-next2,
+.custom-prev3,
+.custom-next3 {
+  cursor: pointer;
+}
+/* globals.css */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #3498db; /* Customize the color */
+  border-radius: 50%;
+  margin: auto;
+}
+.loading-spinner-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.coachgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.dropdown-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+.dropdown-container select {
+  appearance: none; /* Removes default arrow */
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  padding: 10px 20px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+/* Custom arrow container */
+.dropdown-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 15px; /* Adjust to align properly */
+  transform: translateY(-50%);
+  width: 12px; /* Adjust size */
+  height: 12px; /* Adjust size */
+  background-image: url("../assets/downarr.png"); /* Replace with your arrow image URL */
+  background-size: cover;
+  pointer-events: none; /* Ensure it doesn't block clicks */
+}
+.match-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.matchitem {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  background-color: red;
+  margin: 2rem auto 0;
+  padding: 2rem 3rem;
+  font-size: 1.8rem;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
 }

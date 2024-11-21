@@ -92,6 +92,9 @@
   line-height: 1.5;
   text-transform: uppercase;
 }
+.full-text-justify {
+  text-align: justify;
+}
 @media screen and (max-width: 992px) {
   .title {
     text-align: center;

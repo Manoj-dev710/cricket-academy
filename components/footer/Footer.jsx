@@ -66,7 +66,7 @@ const Footer = () => {
                 />
                 <div>
                   <h3 className="middletext text-white">Address</h3>
-                  <p className="paragraph text-white mt-1">
+                  <p className="paragraph text-white ">
                     FairTree Cricket Ground, 385 Elson St, Markham, ON L3S 4R9
                   </p>
                 </div>
@@ -75,14 +75,14 @@ const Footer = () => {
                 <Image src={callnew} alt="callnew" className="socialIcon2" />
                 <div>
                   <h3 className="middletext text-white">Phone</h3>
-                  <p className="paragraph text-white mt-1">+1 (416) 939-6202</p>
+                  <p className="paragraph text-white ">+1 (416) 939-6202</p>
                 </div>
               </div>
               <div className="flex align_center gap2 mt-2">
                 <Image src={msgnew} alt="msgnew" className="socialIcon2" />
                 <div>
                   <h3 className="middletext text-white">Mail</h3>
-                  <p className="paragraph text-white mt-1">
+                  <p className="paragraph text-white ">
                     coach@markhamcricketacademy
                   </p>
                 </div>

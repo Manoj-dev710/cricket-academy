@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -15,8 +15,13 @@ const SponserSlider = () => {
         slidesPerView={6}
         navigation={false}
         pagination={false}
+        loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         scrollbar={{ draggable: true }}
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination,Autoplay]}
         breakpoints={{
           0: {
             slidesPerView: 2,

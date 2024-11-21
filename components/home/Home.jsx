@@ -68,7 +68,7 @@ const Home = () => {
               />
             </div>
             <div>
-              <h2 className="title">
+              <h2 className="title ">
                 Transforming enthusiasts into skilled cricketers through
                 professional coaching and dedication.
               </h2>
@@ -79,7 +79,7 @@ const Home = () => {
                   className="img-fluid block margin-auto"
                 />
               </div>
-              <p className="paragraph justify-center mt-2">
+              <p className="paragraph full-text-justify mt-2">
                 Lorem ipsum dolor sit amet consectetur. Et ante imperdiet
                 porttitor vulputate id. Ultrices id lectus lectus consequat
                 porttitor lobortis. Morbi sit nunc eleifend magna ornare enim.
@@ -98,7 +98,7 @@ const Home = () => {
       {/* players */}
       <Player />
       {/* slider */}
-      <section className={`sectionpading bg1`}>
+      <section className={`sectionpading bg1 section_top`}>
         <div className="container">
           <h2 className="title rocket text-center">Our players</h2>
           <div className="inner-margin">
@@ -115,7 +115,7 @@ const Home = () => {
                 Unlock potential, master skills, and dominate the cricketing
                 arena together
               </h2>
-              <p className="paragraph mt-2 text-gray justify-center">
+              <p className="paragraph mt-2 text-gray full-text-justify">
                 At our academy, we are committed to providing a world-class
                 cricketing environment that inspires players to achieve their
                 full potential. Our experienced coaching staff, state-of-the-art
@@ -140,7 +140,7 @@ const Home = () => {
                   alt="master skill"
                   className="img-fluid"
                 />
-                <p className="paragraph text-gray lg-margin-bottom2">
+                <p className="paragraph text-gray lg-margin-bottom2 ">
                   At our academy, we are committed to providing a world-class
                   cricketing environment that inspires players to achieve their
                   full potential. Our experienced coaching
@@ -167,7 +167,7 @@ const Home = () => {
                   className="img-fluid block margin-auto"
                 />
               </div>
-              <p className="paragraph mt-2 text-white justify-center">
+              <p className="paragraph mt-2 text-white full-text-justify">
                 At our academy, we are committed to providing a world-class
                 cricketing environment that inspires players to achieve their
                 full potential. Our experienced coaching staff, state-of-the-art
@@ -210,7 +210,7 @@ const Home = () => {
           </div>
         </div>
         <div className="desktopview">
-          <Image src={academy} alt="academy" className="imagefit" />
+          <Image src={academy} alt="academy" className="imagefit opacitydim" />
         </div>
       </section>
       {/* MATCH */}

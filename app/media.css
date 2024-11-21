@@ -1,59 +1,82 @@
 @media screen and (max-width: 992px) {
-    .grid-2-to-2,
-    .grid_1_to_2,
-    .grid_2_to_1 {
-      grid-template-columns: 1fr;
-    }
-    .mobile-flex-center {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .lg-text-center {
-      text-align: center;
-    }
-    .abs-center {
-      position: initial;
-      transform: none;
-    }
-    .lg-justify-center {
-      justify-content: center;
-    }
-    .testimonial-grid {
-      grid-template-columns: 1fr 1fr;
-    }
-    .team-member {
-      width: calc(100% / 2 - 2rem);
-    }
+  .grid-2-to-2,
+  .grid_1_to_2,
+  .grid_2_to_1 {
+    grid-template-columns: 1fr;
   }
-  @media screen and (max-width: 640px) {
-    .testimonial-grid {
-      grid-template-columns: 1fr;
-    }
-    .team-member {
-      width: 100%;
-    }
+  .mobile-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  @media screen and (max-width: 500px) {
-    .nav-tabs {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 2rem;
-    }
-    .navimg {
-      display: none;
-    }
-    .lg-margin-bottom2 {
-      margin-bottom: 2rem;
-    }
-    .blue-counter-box {
-      grid-template-columns: 1fr 1fr;
-      padding: 2.5rem;
-      gap: 3rem;
-    }
-    .sectionpadingfull {
-      padding: 2.5rem;
-    }
+  .lg-text-center {
+    text-align: center;
   }
-  
+  .abs-center {
+    position: initial;
+    transform: none;
+  }
+  .lg-justify-center {
+    justify-content: center;
+  }
+  .testimonial-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .team-member {
+    width: calc(100% / 2 - 2rem);
+  }
+  .image-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .coachgrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dropdown-container {
+    flex-wrap: wrap;
+  }
+  .dropdown-container select {
+    width: calc(50% - 2rem);
+  }
+}
+@media screen and (max-width: 640px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+  .team-member {
+    width: 100%;
+  }
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 500px) {
+  .nav-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .navimg {
+    display: none;
+  }
+  .lg-margin-bottom2 {
+    margin-bottom: 2rem;
+  }
+  .blue-counter-box {
+    grid-template-columns: 1fr 1fr;
+    padding: 2.5rem;
+    gap: 3rem;
+  }
+  .sectionpadingfull {
+    padding: 2.5rem;
+  }
+  .image-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .coachgrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .dropdown-container select {
+    width: 100%;
+  }
+}

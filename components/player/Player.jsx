@@ -17,7 +17,7 @@ const Player = () => {
               />
             </div>
             <div>
-              <p className="paragraph text-gray justify-center lg-margin-bottom2">
+              <p className="paragraph text-gray full-text-justify lg-margin-bottom2">
                 Markham Cricket Academy would like to congratulate Ms. Rhea
                 Misra for her impeccable achievements. Her growth In Markham
                 Cricket Academy in Canada has been astonishing and very
