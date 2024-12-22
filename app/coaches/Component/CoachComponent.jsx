@@ -15,6 +15,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Button from "@/UI/redbutton/Button";
 import CoachParagraph from "../[name]/Component/CoachParagraph";
+import { coachDetails } from "@/db/coachdb";
 const CoachComponent = () => {
   const router = useRouter();
   const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Coaches" }];
@@ -23,22 +24,9 @@ const CoachComponent = () => {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
   };
-  const [selectedCoach, setSelectedCoach] = useState({
-    id: 1,
-    id: 1,
-    name: "Gerard Rajendram",
-    specialization: "Head Coach",
-    image: {
-      src: "/_next/static/media/slider1.2cf223ef.png",
-      height: 445,
-      width: 345,
-      blurDataURL:
-        "/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fslider1.2cf223ef.png&w=6&q=70",
-      blurWidth: 6,
-      blurHeight: 8,
-    },
-    para: `Gerard Rajendram, Founder and Head Coach of Markham Cricket Academy (MCA), has over 25 years of coaching experience, training students from ages four to senior levels since 2007. With certifications from Sri Lanka Cricket (Levels 1 and 2), a Diploma in Physical Education, and Level 1 certifications from NCCP and ICC, he has coached in Ontario, emphasizing cricket skills, discipline, and fitness. MCA teams have won multiple championships, including TDCA titles in 2013, 2015, 2021, and 2022, while several players have advanced to Ontario and National levels, including one female player selected for the 2023 ICC Women’s T20 World Cup Americas Qualifier. `,
-  });
+  const [selectedCoach, setSelectedCoach] = useState(
+    coachDetails[0]
+  );
   const handleCoachSelect = (coach) => {
     setSelectedCoach(coach);
   };
