@@ -14,6 +14,7 @@ import CoachSlider from "@/UI/slider/CoachSlider";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Button from "@/UI/redbutton/Button";
+import CoachParagraph from "../[name]/Component/CoachParagraph";
 const CoachComponent = () => {
   const router = useRouter();
   const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Coaches" }];
@@ -24,8 +25,9 @@ const CoachComponent = () => {
   };
   const [selectedCoach, setSelectedCoach] = useState({
     id: 1,
-    name: "Raji Sharma",
-    specialization: "Batting Coach",
+    id: 1,
+    name: "Gerard Rajendram",
+    specialization: "Head Coach",
     image: {
       src: "/_next/static/media/slider1.2cf223ef.png",
       height: 445,
@@ -35,7 +37,7 @@ const CoachComponent = () => {
       blurWidth: 6,
       blurHeight: 8,
     },
-    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    para: `Gerard Rajendram, Founder and Head Coach of Markham Cricket Academy (MCA), has over 25 years of coaching experience, training students from ages four to senior levels since 2007. With certifications from Sri Lanka Cricket (Levels 1 and 2), a Diploma in Physical Education, and Level 1 certifications from NCCP and ICC, he has coached in Ontario, emphasizing cricket skills, discipline, and fitness. MCA teams have won multiple championships, including TDCA titles in 2013, 2015, 2021, and 2022, while several players have advanced to Ontario and National levels, including one female player selected for the 2023 ICC Women’s T20 World Cup Americas Qualifier. `,
   });
   const handleCoachSelect = (coach) => {
     setSelectedCoach(coach);
@@ -49,7 +51,7 @@ const CoachComponent = () => {
       <section className="section_top">
         <div className="container">
           <Breadcrumbs paths={breadcrumbs} />
-          <div className="grid-2-to-2 gap5">
+          {/* <div className="grid-2-to-2 gap5">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -58,7 +60,7 @@ const CoachComponent = () => {
             >
               <h2 className="title text-blue rocket">Head coach</h2>
               <h3 className="middletext text-red lg-text-center">
-                Hasantha Mendis
+                Gerard Rajendram
               </h3>
               <div className="mobileview">
                 <Image
@@ -68,24 +70,28 @@ const CoachComponent = () => {
                 />
               </div>
               <p className="paragraph text-gray full-text-justify mt-2">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis
-                cumque itaque, dolorem sapiente quisquam rem porro impedit.
-                Numquam neque nobis at deserunt culpa officia quos, temporibus,
-                est aperiam commodi atque doloremque praesentium hic. Atque
-                pariatur dicta ad quasi facere consectetur minus eaque quaerat
-                ducimus, fuga excepturi doloribus eveniet recusandae culpa
-                exercitationem, dolor soluta qui quas beatae amet! Fugiat a quae
-                ipsam aut delectus velit minima vitae eius consectetur, optio
-                distinctio esse dolore obcaecati. Labore, id? Quam vitae
-                voluptatem autem iure, officia, est sit atque blanditiis modi
-                fugiat vel nulla beatae, temporibus quas nemo nostrum neque enim
-                quo minima repellat! Iusto?
+                With more than 25 years of combined coaching experience, Gerard
+                Rajendram is now Founder, President and Head Coach of the
+                Markham Cricket Academy (MCA), a program he started back in 2007
+                for students ranging from children aged four to players in the
+                Senior Division. Since the formation of the Academy, Coach
+                Gerard has been training students year-round at various indoor
+                facilities and cricket grounds in Ontario, such as Markham,
+                Scarborough and elsewhere. The coaching program includes cricket
+                drills for all students, one-on-one sessions, hands-on training
+                and mentoring, as well as a strong focus on discipline and
+                fitness for the young cricketers. Before moving to Canada, Coach
+                Gerard gained the Sri Lanka Cricket Coaching Certificate (Levels
+                1 and 2) and achieved the Diploma in Physical Education from the
+                National Institute of Education in Sri Lanka. From the period
+                2000-2006, he served Sri Lanka Cricket as a one of the District
+                Coaches
               </p>
             </motion.div>
             <div className="desktopview">
               <Image src={coaches} alt="cricket player" className="img-fluid" />
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
       {/* Our Coaches */}
@@ -133,9 +139,7 @@ const CoachComponent = () => {
                     className="img-fluid block margin-auto"
                   />
                 </div>
-                <p className="paragraph text-gray full-text-justify mt-2">
-                  {selectedCoach.para}
-                </p>
+                <CoachParagraph para={selectedCoach.para} btn={false} />
                 <div className="mt-2">
                   <Button onClick={() => handleCoachClick(selectedCoach.name)}>
                     Know more

@@ -6,6 +6,7 @@ import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
 // IMAGES
 import banner from "@/assets/banner/testimonialBanner.png";
 import bannermob from "@/assets/banner/teambannermob.png";
+import CoachParagraph from "./Component/CoachParagraph";
 
 export const metadata = {
   title: "Coaches",
@@ -63,9 +64,7 @@ export default async function CoachDetail({ params }) {
                   className="img-fluid block margin-auto"
                 />
               </div>
-              <p className="paragraph text-gray full-text-justify mt-2">
-                {coach.para}
-              </p>
+              <CoachParagraph para={coach.para} btn={true} />
             </div>
           </div>
         </div>
