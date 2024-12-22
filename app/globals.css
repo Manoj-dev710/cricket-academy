@@ -525,3 +525,28 @@ html {
   border-radius: 10px;
   text-align: center;
 }
+/* coach img */
+.coachimg {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+/* gallery */
+.galleryItemcard {
+  padding: 2rem;
+  background: var(--white);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+}
+.galleryItemcard img{
+  width: 100%;
+  height: auto;
+}
+.galleryItemcard h3{
+  font-family: var(--font-outfit);
+  margin-top: 1rem;
+  font-weight: 600px;
+  font-size: 2rem;
+  text-align: center;
+}

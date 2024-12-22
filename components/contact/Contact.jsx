@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
 import Form from "../form/Form";
@@ -9,18 +11,30 @@ import call from "@/assets/social/call.png";
 import youtube from "@/assets/social/youtube.png";
 import instagram from "@/assets/social/instagram.png";
 import facebook from "@/assets/social/facebook.png";
+const fadeIn = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
+
 const Contact = () => {
   return (
     <section className="section_top">
       <div className="container">
         <div className="grid-2-to-2 gap5">
           <div>
-            <h2 className="title rocket text-blue">Get in touch</h2>
-            <p className="paragraph text-gray">
-              Lorem ipsum dolor sit amet consectetur. Auctor viverra mauris
-              adipiscing et integer sit gravida scelerisque cursus. At
-              vestibulum sit nullam enim
-            </p>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.2 }}
+              variants={fadeIn}
+            >
+              <h2 className="title rocket text-blue">Get in touch</h2>
+              <p className="paragraph text-gray">
+                Lorem ipsum dolor sit amet consectetur. Auctor viverra mauris
+                adipiscing et integer sit gravida scelerisque cursus. At
+                vestibulum sit nullam enim
+              </p>
+            </motion.div>
             <div className="flex align_center gap2 mt-2 ">
               <Image src={location} alt="location" className="socialIcon" />
               <div>

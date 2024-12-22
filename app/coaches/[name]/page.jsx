@@ -2,10 +2,11 @@ import { notFound } from "next/navigation";
 import { coachDetails } from "@/db/coachdb";
 import Image from "next/image";
 import Banner from "@/components/banner/Banner";
-
+import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs";
 // IMAGES
 import banner from "@/assets/banner/testimonialBanner.png";
 import bannermob from "@/assets/banner/teambannermob.png";
+
 export const metadata = {
   title: "Coaches",
   description: "Coaches Details",
@@ -19,6 +20,14 @@ export default async function CoachDetail({ params }) {
   if (!coach) {
     notFound(); // Show the default "Page Not Found" if coach is not found
   }
+  const breadcrumbs = [
+    { label: "Home", href: "/" },
+    { label: "Coaches", href: "/coaches" },
+    {
+      label: coach.name,
+    },
+  ];
+
   return (
     <>
       {/* Banner */}
@@ -30,6 +39,8 @@ export default async function CoachDetail({ params }) {
       {/* Coach Detail */}
       <section className="section_top">
         <div className="container">
+          <Breadcrumbs paths={breadcrumbs} />
+
           <div className="grid-2-to-2  gap5 align_center">
             <div className="desktopview">
               <Image

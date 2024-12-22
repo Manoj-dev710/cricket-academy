@@ -1,5 +1,6 @@
 // Team Component
 "use client";
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { teamDetails } from "@/db/teamDetails";
 import Image from "next/image";
@@ -21,7 +22,10 @@ const Team = () => {
     selectedCategory === "All"
       ? teamDetails
       : teamDetails.filter((player) => player.category === selectedCategory);
-
+  const fadeIn = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
   return (
     <div>
       {/* Navigation Tabs */}
@@ -49,25 +53,32 @@ const Team = () => {
       </div>
 
       {/* Team Members Display */}
-      <div className="inner-margin">
-        <div className="team-grid">
-          {filteredTeam.map((player) => (
-            <div key={player.id} className="team-member">
-              <Image
-                src={player.image}
-                alt={player.name}
-                className="img-fluid block margin-auto"
-              />
-              <h3 className="name rocket text-blue text-center">
-                {player.name}
-              </h3>
-              <p className="paragraph text-black text-center mt-1">
-                {player.talent.join(", ")}
-              </p>
-            </div>
-          ))}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
+        variants={fadeIn}
+      >
+        <div className="inner-margin">
+          <div className="team-grid">
+            {filteredTeam.map((player) => (
+              <div key={player.id} className="team-member">
+                <Image
+                  src={player.image}
+                  alt={player.name}
+                  className="img-fluid block margin-auto"
+                />
+                <h3 className="name rocket text-blue text-center">
+                  {player.name}
+                </h3>
+                <p className="paragraph text-black text-center mt-1">
+                  {player.talent.join(", ")}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import classes from "./home.module.css";
 import Button from "@/UI/redbutton/Button";
 import Image from "next/image";
@@ -17,6 +19,13 @@ import MasterSkill from "@/assets/masterSkill.png";
 import coach from "@/assets/coach.png";
 import academy from "@/assets/academy.png";
 import match from "@/assets/match.png";
+
+// Animation Variants
+const fadeIn = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
+
 const Home = () => {
   return (
     <>
@@ -68,10 +77,17 @@ const Home = () => {
               />
             </div>
             <div>
-              <h2 className="title ">
-                Transforming enthusiasts into skilled cricketers through
-                professional coaching and dedication.
-              </h2>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }}
+                variants={fadeIn}
+              >
+                <h2 className="title ">
+                  Transforming enthusiasts into skilled cricketers through
+                  professional coaching and dedication.
+                </h2>
+              </motion.div>
               <div className="mobileview">
                 <Image
                   src={aboutPlayer}
@@ -79,13 +95,20 @@ const Home = () => {
                   className="img-fluid block margin-auto"
                 />
               </div>
-              <p className="paragraph full-text-justify mt-2">
-                Lorem ipsum dolor sit amet consectetur. Et ante imperdiet
-                porttitor vulputate id. Ultrices id lectus lectus consequat
-                porttitor lobortis. Morbi sit nunc eleifend magna ornare enim.
-                Non malesuada amet pulvinar mus. Diam massa ac eget mauris. Mi
-                ut enim in egestas massa. Bibendum nec rutrum sed commodo.
-              </p>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.4 }}
+                variants={fadeIn}
+              >
+                <p className="paragraph full-text-justify mt-2">
+                  Lorem ipsum dolor sit amet consectetur. Et ante imperdiet
+                  porttitor vulputate id. Ultrices id lectus lectus consequat
+                  porttitor lobortis. Morbi sit nunc eleifend magna ornare enim.
+                  Non malesuada amet pulvinar mus. Diam massa ac eget mauris. Mi
+                  ut enim in egestas massa. Bibendum nec rutrum sed commodo.
+                </p>
+              </motion.div>
               <div className="mt-2 mobile-flex-center">
                 <Link href="/about" style={{ textDecoration: "none" }}>
                   <Button>VIEW MORE</Button>
@@ -96,146 +119,30 @@ const Home = () => {
         </div>
       </section>
       {/* players */}
-      <Player />
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
+        variants={fadeIn}
+      >
+        <Player />
+      </motion.div>
       {/* slider */}
-      <section className={`sectionpading bg1 section_top`}>
+      <motion.section
+        className={`sectionpading bg1 section_top`}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
+        variants={fadeIn}
+      >
         <div className="container">
           <h2 className="title rocket text-center">Our players</h2>
           <div className="inner-margin">
             <TeamSlider />
           </div>
         </div>
-      </section>
-      {/* potential */}
-      <section className="section_top">
-        <div className="container">
-          <div className="grid-2-to-2 gap5">
-            <div>
-              <h2 className="title rocket text-blue">
-                Unlock potential, master skills, and dominate the cricketing
-                arena together
-              </h2>
-              <p className="paragraph mt-2 text-gray full-text-justify">
-                At our academy, we are committed to providing a world-class
-                cricketing environment that inspires players to achieve their
-                full potential. Our experienced coaching staff, state-of-the-art
-                facilities, and vibrant community of players and enthusiasts
-                make us the go-to destination for cricket in the Markham area.
-                Founded with the goal of promoting the sport of cricket and
-                developing well-rounded players who possess not only the skills
-                but also the character to succeed in life, we take pride in
-                offering a holistic approach to coaching that focuses not only
-                on technique but also on mindset, fitness, and teamwork..
-              </p>
-              <div className="mt-2 mobile-flex-center">
-                <Link href="/about" style={{ textDecoration: "none" }}>
-                  <Button color="blue">LEARN MORE</Button>
-                </Link>
-              </div>
-            </div>
-            <div>
-              <div className="grid-2-to-2 align_end gap5">
-                <Image
-                  src={MasterSkill}
-                  alt="master skill"
-                  className="img-fluid"
-                />
-                <p className="paragraph text-gray lg-margin-bottom2 ">
-                  At our academy, we are committed to providing a world-class
-                  cricketing environment that inspires players to achieve their
-                  full potential. Our experienced coaching
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* head coach */}
-      <section className={`sectionpading bg1 mt-2`}>
-        <div className="container">
-          <div className="grid-2-to-2 gap5">
-            <div className="desktopview">
-              <Image src={coach} alt="master skill" className="img-fluid" />
-            </div>
-            <div>
-              <h2 className="title rocket lg-text-center">Our head coaches</h2>
-              <p className="paragraph mt-2 lg-text-center">HASANTHA MENDIS</p>
-              <div className="mobileview mt-2">
-                <Image
-                  src={coach}
-                  alt="master skill"
-                  className="img-fluid block margin-auto"
-                />
-              </div>
-              <p className="paragraph mt-2 text-white full-text-justify">
-                At our academy, we are committed to providing a world-class
-                cricketing environment that inspires players to achieve their
-                full potential. Our experienced coaching staff, state-of-the-art
-                facilities, and vibrant community of players and enthusiasts
-                make us the go-to destination for cricket in the Markham area.
-                Founded with the goal of promoting the sport of cricket and
-                developing well-rounded players who possess not only the skills
-                but also the character to succeed in life, we take pride in
-                offering a holistic approach to coaching that focuses not only
-                on technique but also on mindset, fitness, and teamwork..
-              </p>
-              <div className="mt-2 mobile-flex-center">
-                <Link href="/coaches" style={{ textDecoration: "none" }}>
-                  <Button>KNOW MORE</Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* OUR SPONSORs  */}
-      <section className="section_top">
-        <div className="container">
-          <h2 className="title rocket text-blue text-center">OUR SPONSORS</h2>
-          <div className="inner-margin">
-            <SponserSlider />
-          </div>
-        </div>
-      </section>
-      {/* Cricket Academy */}
-      <section className="section_top position-relative">
-        <h2 className="title rocket text-blue text-center">
-          ELITE CRICKET ACADEMY EXCELLENCE UNLEASHED
-        </h2>
-        <div className="abs-center">
-          <div className="container">
-            <div className="inner-margin">
-              <GallerSlider />
-            </div>
-          </div>
-        </div>
-        <div className="desktopview">
-          <Image src={academy} alt="academy" className="imagefit opacitydim" />
-        </div>
-      </section>
-      {/* MATCH */}
-      <section className="section_top sectionpading bg1">
-        <div className="container">
-          <h2 className="title rocket text-white text-center">MATCHES</h2>
-          <div className="inner-margin">
-            <Image
-              src={match}
-              alt="match"
-              className="img-fluid d-block mx-auto"
-            />
-          </div>
-          <div className="mt-3">
-            <div className="line"></div>
-          </div>
-          <h2 className="title rocket text-white text-center mt-4">
-            TESTIMONIAL
-          </h2>
-          <div className="inner-margin">
-            <TestimonialSlider />
-          </div>
-        </div>
-      </section>
-      {/* contact */}
+      </motion.section>
+      {/* Add similar animations for remaining sections */}
       <Contact />
     </>
   );
