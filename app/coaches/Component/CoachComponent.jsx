@@ -92,7 +92,7 @@ const CoachComponent = () => {
             viewport={{ once: false, amount: 0.2 }}
             variants={fadeIn}
           >
-            <div className="inner-margin">
+            <div className="inner-margin" style={{cursor:"pointer"}}>
               {/* <Coach /> */}
               <CoachSlider onSelect={handleCoachSelect} />
             </div>
