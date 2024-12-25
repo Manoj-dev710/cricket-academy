@@ -14,7 +14,7 @@ const CoachSlider = ({ onSelect }) => {
   return (
     <div>
       <Swiper
-        loop={true}
+        // loop={true}
         spaceBetween={50}
         slidesPerView={3}
         navigation={{
