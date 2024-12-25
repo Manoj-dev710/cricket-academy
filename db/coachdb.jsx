@@ -1,5 +1,6 @@
 import coach1 from "@/assets/slider/slider1.png";
 import coachM from "@/assets/slider/coach.png";
+import menda from "@/assets/slider/menda.png";
 import coach2 from "@/assets/slider/slider2.png";
 import coach3 from "@/assets/slider/slider3.png";
 export const coachDetails = [
@@ -27,8 +28,14 @@ export const coachDetails = [
     id: 2,
     name: "Hasantha mendis ",
     specialization: "Senior Coach",
-    image: coach2,
-    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    image: menda,
+    para: `Hasantha Mendis brings a dynamic and versatile approach to cricket coaching, honed through his extensive playing career and coaching experience. Born and raised in Sri Lanka, Hasantha's journey in cricket began at a young age, fueled by his innate passion for the sport. His natural talent and dedication led him to excel in various disciplines, from batting to bowling, earning him recognition at both national and international levels. </br>
+    Member of Sri Lanka Under-15 World Cup squad (2000) </br> 
+    Represented Sri Lanka in the Under-17 Asia Cup squad (2001) </br> 
+    Selected for the Sri Lanka Development squad (2002-2004) </br>
+    As a coach, Hasantha prioritizes holistic player development, emphasizing not only technical skills but also mental resilience and tactical understanding. He believes in creating a supportive and nurturing environment where players feel empowered to unleash their full potential. Through personalized training sessions and constructive feedback, Hasantha aims to instill confidence and instill a lifelong love for the game in his students. </br>
+    
+    `,
   },
   // {
   //   id: 3,
