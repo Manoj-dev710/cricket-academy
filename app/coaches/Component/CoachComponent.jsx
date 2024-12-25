@@ -85,7 +85,7 @@ const CoachComponent = () => {
       {/* Our Coaches */}
       <section className="section_top">
         <div className="container">
-          <h2 className="title text-blue rocket text-center">Our Coaching</h2>
+          <h2 className="title text-blue rocket text-center">Our Coaches</h2>
           <motion.div
             initial="hidden"
             whileInView="visible"

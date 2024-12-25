@@ -21,6 +21,7 @@ const CoachSlider = ({ onSelect }) => {
           nextEl: ".custom-nexta",
           prevEl: ".custom-preva",
         }}
+        centeredSlides={true}
         pagination={false}
         scrollbar={{ draggable: true }}
         modules={[Navigation, Pagination]}
